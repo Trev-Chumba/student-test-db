@@ -24,8 +24,8 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable) // Disable CSRF since we use JWT
                 .cors(Customizer.withDefaults()) // Enable CORS (configured separately)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/login").permitAll() // Allow login endpoint
-                        .anyRequest().authenticated() // Secure all other endpoints
+                        .requestMatchers("/auth/login", "/excel/generate/**").permitAll() // Allow login endpoint
+                        .anyRequest().permitAll() // Secure all other endpoints
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Make API stateless

@@ -32,6 +32,10 @@ public class Student {
         this.photoPath = photoPath;
     }
 
+    public Student() {
+
+    }
+
 
     public Long getStudentId() {
         return studentId;

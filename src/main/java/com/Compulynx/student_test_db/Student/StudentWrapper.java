@@ -1,5 +1,6 @@
 package com.Compulynx.student_test_db.Student;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 
 import java.time.LocalDate;
@@ -11,6 +12,7 @@ public class StudentWrapper {
     private Long studentId;
     private String firstName;
     private String lastName;
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate DOB;
     private String studentClass;
     private Long score;
